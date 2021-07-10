@@ -65,15 +65,15 @@
 }
 
 .instant {
-    fill: #FFAAFF;
+    fill: DimGrey;
     stroke-width: 6;
     cursor : default;
     /*pointer-events: true;*/
 }
 
 .instantLabel {
-    fill : blue;
-    font: 10px sans-serif;
+    fill : DimGrey;
+    font: 16px sans-serif;
     shape-rendering: crispEdges;
 }
 
