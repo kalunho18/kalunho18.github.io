@@ -140,13 +140,13 @@ function timeline(domElement) {
         data.items.forEach(function (item){
             item.start = parseDate(item.start);
             if (item.end == "") {
-                //console.log("1 item.start: " + item.start);
-                //console.log("2 item.end: " + item.end);
+                console.log("1 item.start: " + item.start);
+                console.log("2 item.end: " + item.end);
                 item.end = new Date(item.start.getTime() + instantOffset);
-                //console.log("3 item.end: " + item.end);
+                console.log("3 item.end: " + item.end);
                 item.instant = true;
             } else {
-                //console.log("4 item.end: " + item.end);
+                console.log("4 item.end: " + item.end);
                 item.end = parseDate(item.end);
                 item.instant = false;
             }
