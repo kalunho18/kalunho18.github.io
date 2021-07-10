@@ -78,7 +78,7 @@
 }
 
 .intervalLabel {
-    fill : black;
+    fill : white;
     font: 10px sans-serif;
     shape-rendering: crispEdges;
 }
