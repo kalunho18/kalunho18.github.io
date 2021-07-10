@@ -347,9 +347,9 @@ function timeline(domElement) {
         function getHtml(element, d) {
             var html;
             if (element.attr("class") == "interval") {
-                html = d.label + "<br>" + toYear(d.start) + " - " + toYear(d.end);
+                html = d.label + "<br>" + toYear(d.start) + " - " + toYear(d.end) + "<br>" + d.message;
             } else {
-                html = d.label + "<br>" + toYear(d.start);
+                html = d.label + "<br>" + toYear(d.start) + "<br>" + d.message;
             }
             return html;
         }
