@@ -58,7 +58,7 @@
 }
 
 .interval {
-    fill: #AAFFFF;
+    fill: steelblue;
     stroke-width: 6;
     cursor : default;
     pointer-events: true;
