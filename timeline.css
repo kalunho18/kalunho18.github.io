@@ -101,9 +101,9 @@
     visibility: hidden;
     color : black;
     cursor:default;
-    background-color: #FFFFEE;
-    border: 1px solid;
-    padding: 4px;
+    background-color: gainsboro;
+    border: 2px solid Steelblue;
+    padding: 18px;
     shape-rendering: crispEdges;
     pointer-events: none;
 }
