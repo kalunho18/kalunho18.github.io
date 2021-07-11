@@ -65,7 +65,7 @@
 }
 
 .instant {
-    fill: DimGrey;
+    fill: Steelblue;
     stroke-width: 6;
     cursor : default;
     /*pointer-events: true;*/
