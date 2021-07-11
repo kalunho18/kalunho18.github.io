@@ -10,8 +10,8 @@ function timeline(domElement) {
 
     // chart geometry
     var margin = {top: 20, right: 20, bottom: 20, left: 20},
-        outerWidth = 960,
-        outerHeight = 500,
+        outerWidth = window.innerWidth*0.95;
+        outerHeight = 300,
         width = outerWidth - margin.left - margin.right,
         height = outerHeight - margin.top - margin.bottom;
 
@@ -161,8 +161,8 @@ function timeline(domElement) {
         //calculateTracks(data.items, "ascending", "backward");
         //calculateTracks(data.items, "descending", "forward");
         // Show real data
-        calculateTracks(data.items, "descending", "backward");
-        //calculateTracks(data.items, "ascending", "forward");
+        //calculateTracks(data.items, "descending", "backward");
+        calculateTracks(data.items, "ascending", "forward");
         data.nTracks = tracks.length;
         data.minDate = d3.min(data.items, function (d) { return d.start; });
         data.maxDate = d3.max(data.items, function (d) { return d.end; });
@@ -218,7 +218,8 @@ function timeline(domElement) {
         var intervals = d3.select("#band" + bandNum).selectAll(".interval");
         intervals.append("rect")
             .attr("width", "100%")
-            .attr("height", "100%");
+            .attr("height", "100%")
+            .attr("fill", function(d) {return d.color});
         intervals.append("text")
             .attr("class", "intervalLabel")
             .attr("x", 1)
@@ -280,10 +281,7 @@ function timeline(domElement) {
                     "Start of the selected interval", band.x + 30, labelTop],
                 ["end", "bandMinMaxLabel", band.w - labelWidth, band.w - 4,
                     function(min, max) { return toYear(max); },
-                    "End of the selected interval", band.x + band.w - 152, labelTop],
-                ["middle", "bandMidLabel", (band.w - labelWidth) / 2, band.w / 2,
-                    function(min, max) { return max.getUTCFullYear() - min.getUTCFullYear(); },
-                    "Length of the selected interval", band.x + band.w / 2 - 75, labelTop]
+                    "End of the selected interval", band.x + band.w - 152, labelTop]
             ];
 
         var bandLabels = chart.append("g")
@@ -347,9 +345,9 @@ function timeline(domElement) {
         function getHtml(element, d) {
             var html;
             if (element.attr("class") == "interval") {
-                html = d.label + "<br>" + toYear(d.start) + " - " + toYear(d.end) + "<br>" + d.message;
+                html = d.label + "<br>" + toYear(d.start) + " - " + toYear(d.end)+"<br>" + d.message+"<br>" + d.color;
             } else {
-                html = d.label + "<br>" + toYear(d.start) + "<br>" + d.message;
+                html = d.label + "<br>" + toYear(d.start)+"<br>" + d.message+"<br>" + d.color;
             }
             return html;
         }
@@ -390,7 +388,7 @@ function timeline(domElement) {
             .scale(band.xScale)
             .orient(orientation || "bottom")
             .tickSize(6, 0)
-            .tickFormat(function (d) { return toYear(d); });
+            .tickFormat(function (d) { return toMonthYear(d); });
 
         var xAxis = chart.append("g")
             .attr("class", "axis")
@@ -503,6 +501,29 @@ function timeline(domElement) {
         if (year > 0) return year.toString();
         if (bcString[0] == '-') return bcString + (-year);
         return (-year) + bcString;
+    }
+	
+    function toMonthYear(date) {
+		
+	    const months = {
+			0: 'Jan',
+			1: 'Feb',
+		    2: 'Mar',
+		    3: 'Apr',
+		    4: 'May',
+		    5: 'Jun',
+		    6: 'Jul',
+		    7: 'Aug',
+		    8: 'Sep',
+		    9: 'Oct',
+		    10: 'Nov',
+		    11: 'Dec'
+		}
+		
+        var month = date.getMonth();
+        var year = date.getFullYear();
+        return months[month] + "-" + year.toString();
+
     }
 
     return timeline;
