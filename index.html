@@ -80,24 +80,54 @@
 
     // Define domElement and sourceFile
     var domElement = "#timeline";
-    var sourceFile = "kalun.csv";
+    //var sourceFile = "philosophers.csv";
+    data = read_data();
 
-    // Read in the data and construct the timeline
-    d3.csv(sourceFile, function(dataset) {
+	timeline(domElement)
+				.data(data)
+				.band("mainBand", 0.55)
+				.band("naviBand", 0.25)
+				.xAxis("mainBand")
+				.tooltips("mainBand")
+				.xAxis("naviBand")
+				.labels("mainBand")
+				.labels("naviBand")
+				.brush("naviBand", ["mainBand"])
+				.redraw();
+    function read_data (){
+		const rows = [
+			["start","end","label", "message", "color"],
+			["2000-07-01","2000-09-01","School", "Message 1", "red"],
+			["2000-08-01","2000-12-01","Work", "Message 12", "Steelblue"],
+			["2000-08-16","2000-12-01","Work2", "Message 12", "green"],
+			["2000-07-16","2000-07-30","Internship", "Message 1", "Steelblue"],
+			["2001-01-01","2002-02-01","School", "Message 2", "red"],
+			["2002-07-01","2004-09-01","School", "Message 3", "Steelblue"],
+			["2010-09-01",,"School", "Message 3", "Steelblue"]
+		];
 
-        timeline(domElement)
-            .data(dataset)
-            .band("mainBand", 0.82)
-            .band("naviBand", 0.08)
-            .xAxis("mainBand")
-            .tooltips("mainBand")
-            .xAxis("naviBand")
-            .labels("mainBand")
-            .labels("naviBand")
-            .brush("naviBand", ["mainBand"])
-            .redraw();
 
-    });
+		var data = [];
+        var datapoint = {};
+        var x_ = [];
+        var y_ = [];
+        for (i = 1; i < rows.length; i++){
+          datapoint = {};
+          datapoint["start"] = rows[i][0]
+		  if (rows[i][1] == null){
+			datapoint["end"] = "";
+		  } else{
+		    datapoint["end"] = rows[i][1];
+		  }
+          datapoint["label"] = rows[i][2];
+          datapoint["message"] = rows[i][3];
+          datapoint["color"] = rows[i][4];
+          data.push(datapoint);
+        }
+        return data;
+    }
+	
+	
 
 </script>
 
