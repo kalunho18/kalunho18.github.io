@@ -17,7 +17,7 @@
         .nodeLabel('id')
         .nodeAutoColorBy('group')
         .onNodeClick(node => {
-          console.log(nodes);
+          console.log(Graph.graphData().nodes);
           // Aim at node from outside it
           const distance = 40;
           const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
