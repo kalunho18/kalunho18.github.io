@@ -21,8 +21,8 @@
 			data["links"][i].strength = 1.0;
 	    }
 		 
-	 var baseNodes = [...data.nodes]
-         var baseLinks = [...data.links]
+	 var baseNodes = [...data.nodes];
+         var baseLinks = [...data.links];
          
          function getNeighbors(node) {
            return baseLinks.reduce(function (neighbors, link) {
