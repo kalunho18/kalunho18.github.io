@@ -16,8 +16,8 @@
 		
 		for (let i = 0; i < data["nodes"].length; i++) {
 			data["nodes"][i].label = data["nodes"][i].id;
-			data["nodes"][i].label = 1;
-	    }
+			data["nodes"][i].level = 1;
+	    	}
 		
 		for (let i = 0; i < data["links"].length; i++) {
 			data["links"][i].strength = 1.0;
