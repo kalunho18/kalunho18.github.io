@@ -95,7 +95,7 @@
 		  
          let bu_toggle = true;
          d3.select("#button")
-             .on("click", toggle());
+             .on("click", toggle);
          	
          var dragDrop = d3.drag().on('start', function (node) {
            node.fx = node.x
