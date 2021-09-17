@@ -9,24 +9,30 @@
   <div id="3d-graph"></div>
 
   <script>
-    const elem = document.getElementById('3d-graph');
-
     const Graph = ForceGraph3D()
       (elem)
-        .jsonUrl('kalunhodotcom.json')
+        .graphData(gData)
         .nodeLabel('id')
         .nodeAutoColorBy('group')
         .onNodeClick(node => {
-          console.log(Graph.graphData().nodes);
           // Aim at node from outside it
           const distance = 40;
           const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
+		  
+		      for (let i = 0; i < Graph.graphData().nodes.length; i++) {
+			      console.log(Graph.graphData().nodes[i].id + " " + Graph.graphData().nodes[i].x + " " + Graph.graphData().nodes[i].y + " " + Graph.graphData().nodes[i].z);
+		      }
+		      console.log("-------------------------")
+		      for (let i = 0; i < Graph.graphData().links.length; i++) {
+			      console.log(Graph.graphData().links[i].source.id+ " " + Graph.graphData().links[i].target.id);
+		      }
 
           Graph.cameraPosition(
             { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }, // new position
             node, // lookAt ({ x, y, z })
             3000  // ms transition duration
           );
+		  
         });
   </script>
 </body>
