@@ -12,22 +12,21 @@
       <script>
 	  
 	  d3.json("kalunhodotcom.json", function(error, data) {
+		
 		for (let i = 0; i < data["nodes"].length; i++) {
 			data["nodes"][i].label = data["nodes"][i].id;
 			data["nodes"][i].level = 1;
-	    	}
+	    }
 		
 		for (let i = 0; i < data["links"].length; i++) {
 			data["links"][i].strength = 1.0;
 	    }
 		 
-	 var baseNodes = data.nodes
-         var baselinks = data.links
-	 var nodes = [...data.nodes]
+		 var nodes = [...data.nodes]
          var links = [...data.links]
          
          function getNeighbors(node) {
-           return baseLinks.reduce(function (neighbors, link) {
+           return data.links.reduce(function (neighbors, link) {
                if (link.target.id === node.id) {
                  neighbors.push(link.source.id)
                } else if (link.source.id === node.id) {
@@ -137,19 +136,19 @@
          function resetData() {
            var nodeIds = nodes.map(function (node) { return node.id })
          
-           baseNodes.forEach(function (node) {
+           data.nodes.forEach(function (node) {
              if (nodeIds.indexOf(node.id) === -1) {
                nodes.push(node)
              }
            })
          
-           links = baseLinks
+           links = data.links
          }
          
          // diffing and mutating the data
          function updateData(selectedNode) {
            var neighbors = getNeighbors(selectedNode)
-           var newNodes = baseNodes.filter(function (node) {
+           var newNodes = data.nodes.filter(function (node) {
              return neighbors.indexOf(node.id) > -1 || node.level === 1
            })
          
@@ -161,7 +160,7 @@
            diff.removed.forEach(function (node) { nodes.splice(nodes.indexOf(node), 1) })
            diff.added.forEach(function (node) { nodes.push(node) })
          
-           links = baseLinks.filter(function (link) {
+           links = data.links.filter(function (link) {
              return link.target.id === selectedNode.id || link.source.id === selectedNode.id
            })
          }
