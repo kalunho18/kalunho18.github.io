@@ -10,14 +10,14 @@
 
   <script>
     const elem = document.getElementById('3d-graph');
-    const graphData = jsonUrl('../datasets/miserables.json');
-	
+
     const Graph = ForceGraph3D()
       (elem)
-        .graphData(gData)
+        .jsonUrl('kalunhodotcom.json')
         .nodeLabel('id')
         .nodeAutoColorBy('group')
         .onNodeClick(node => {
+          console.log(nodes);
           // Aim at node from outside it
           const distance = 40;
           const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
