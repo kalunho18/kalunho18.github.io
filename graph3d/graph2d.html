@@ -12,8 +12,6 @@
       <script>
 	  
 	  d3.json("kalunhodotcom.json", function(error, data) {
-		console.log(data);
-		
 		for (let i = 0; i < data["nodes"].length; i++) {
 			data["nodes"][i].label = data["nodes"][i].id;
 			data["nodes"][i].level = 1;
