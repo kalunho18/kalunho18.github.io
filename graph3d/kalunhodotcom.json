@@ -1,450 +1,390 @@
 {
    "nodes":[
       {
-         "id":[
-            0,
-            "kalunhodotcom"
-         ],
-         "group":2
-      },
-      {
-         "id":[
-            1,
-            "huy_vu64"
-         ],
+         "id":"kalunhodotcom",
          "group":1
       },
       {
-         "id":[
-            2,
-            "hustling_madao"
-         ],
+         "id":"huy_vu64",
          "group":1
       },
       {
-         "id":[
-            3,
-            "yasmiiin_9"
-         ],
+         "id":"hustling_madao",
          "group":1
       },
       {
-         "id":[
-            4,
-            "thisismyaidantity"
-         ],
+         "id":"yasmiiin_9",
          "group":1
       },
       {
-         "id":[
-            5,
-            "malsaiii"
-         ],
+         "id":"thisismyaidantity",
          "group":1
       },
       {
-         "id":[
-            6,
-            "thihiiii"
-         ],
+         "id":"malsaiii",
          "group":1
       },
       {
-         "id":[
-            7,
-            "hungt_t"
-         ],
+         "id":"thihiiii",
          "group":1
       },
       {
-         "id":[
-            8,
-            "_myself_adnan_"
-         ],
+         "id":"hungt_t",
          "group":1
       },
       {
-         "id":[
-            9,
-            "danieldurall"
-         ],
+         "id":"_myself_adnan_",
          "group":1
       },
       {
-         "id":[
-            10,
-            "cynvasconcelos"
-         ],
+         "id":"danieldurall",
          "group":1
       },
       {
-         "id":[
-            11,
-            "itsging_er"
-         ],
+         "id":"cynvasconcelos",
          "group":1
       },
       {
-         "id":[
-            12,
-            "fujifil.m"
-         ],
+         "id":"itsging_er",
          "group":1
       },
       {
-         "id":[
-            13,
-            "trung_ls"
-         ],
+         "id":"fujifil.m",
          "group":1
       },
       {
-         "id":[
-            14,
-            "_albarossa_"
-         ],
+         "id":"trung_ls",
          "group":1
       },
       {
-         "id":[
-            15,
-            "maico_ngyn"
-         ],
+         "id":"_albarossa_",
          "group":1
       },
       {
-         "id":[
-            16,
-            "lauraluiize_v"
-         ],
+         "id":"maico_ngyn",
          "group":1
       },
       {
-         "id":[
-            17,
-            "thu_van"
-         ],
+         "id":"lauraluiize_v",
          "group":1
       },
       {
-         "id":[
-            19,
-            "hanto_manto"
-         ],
+         "id":"thu_van",
          "group":1
       },
       {
-         "id":[
-            20,
-            "ibo_z1xx"
-         ],
+         "id":"hanto_manto",
+         "group":1
+      },
+      {
+         "id":"ibo_z1xx",
          "group":1
       }
    ],
    "links":[
       {
-         "source":0,
-         "target":1,
+         "source":"kalunhodotcom",
+         "target":"huy_vu64",
          "value":2
       },
       {
-         "source":1,
-         "target":17,
+         "source":"huy_vu64",
+         "target":"thu_van",
          "value":2
       },
       {
-         "source":1,
-         "target":20,
+         "source":"huy_vu64",
+         "target":"ibo_z1xx",
          "value":2
       },
       {
-         "source":1,
-         "target":3,
+         "source":"huy_vu64",
+         "target":"yasmiiin_9",
          "value":2
       },
       {
-         "source":1,
-         "target":2,
+         "source":"huy_vu64",
+         "target":"hustling_madao",
          "value":2
       },
       {
-         "source":1,
-         "target":6,
+         "source":"huy_vu64",
+         "target":"thihiiii",
          "value":2
       },
       {
-         "source":1,
-         "target":7,
+         "source":"huy_vu64",
+         "target":"hungt_t",
          "value":2
       },
       {
-         "source":0,
-         "target":2,
+         "source":"kalunhodotcom",
+         "target":"hustling_madao",
          "value":2
       },
       {
-         "source":2,
-         "target":17,
+         "source":"hustling_madao",
+         "target":"thu_van",
          "value":2
       },
       {
-         "source":2,
-         "target":3,
+         "source":"hustling_madao",
+         "target":"yasmiiin_9",
          "value":2
       },
       {
-         "source":2,
-         "target":6,
+         "source":"hustling_madao",
+         "target":"thihiiii",
          "value":2
       },
       {
-         "source":2,
-         "target":13,
+         "source":"hustling_madao",
+         "target":"trung_ls",
          "value":2
       },
       {
-         "source":2,
-         "target":20,
+         "source":"hustling_madao",
+         "target":"ibo_z1xx",
          "value":2
       },
       {
-         "source":2,
-         "target":7,
+         "source":"hustling_madao",
+         "target":"hungt_t",
          "value":2
       },
       {
-         "source":0,
-         "target":3,
+         "source":"kalunhodotcom",
+         "target":"yasmiiin_9",
          "value":2
       },
       {
-         "source":3,
-         "target":15,
+         "source":"yasmiiin_9",
+         "target":"maico_ngyn",
          "value":2
       },
       {
-         "source":3,
-         "target":20,
+         "source":"yasmiiin_9",
+         "target":"ibo_z1xx",
          "value":2
       },
       {
-         "source":3,
-         "target":13,
+         "source":"yasmiiin_9",
+         "target":"trung_ls",
          "value":2
       },
       {
-         "source":3,
-         "target":17,
+         "source":"yasmiiin_9",
+         "target":"thu_van",
          "value":2
       },
       {
-         "source":3,
-         "target":19,
+         "source":"yasmiiin_9",
+         "target":"hanto_manto",
          "value":2
       },
       {
-         "source":0,
-         "target":4,
+         "source":"kalunhodotcom",
+         "target":"thisismyaidantity",
          "value":2
       },
       {
-         "source":0,
-         "target":5,
+         "source":"kalunhodotcom",
+         "target":"malsaiii",
          "value":2
       },
       {
-         "source":5,
-         "target":7,
+         "source":"malsaiii",
+         "target":"hungt_t",
          "value":2
       },
       {
-         "source":5,
-         "target":6,
+         "source":"malsaiii",
+         "target":"thihiiii",
          "value":2
       },
       {
-         "source":0,
-         "target":6,
+         "source":"kalunhodotcom",
+         "target":"thihiiii",
          "value":2
       },
       {
-         "source":6,
-         "target":19,
+         "source":"thihiiii",
+         "target":"hanto_manto",
          "value":2
       },
       {
-         "source":6,
-         "target":17,
+         "source":"thihiiii",
+         "target":"thu_van",
          "value":2
       },
       {
-         "source":6,
-         "target":7,
+         "source":"thihiiii",
+         "target":"hungt_t",
          "value":2
       },
       {
-         "source":0,
-         "target":7,
+         "source":"kalunhodotcom",
+         "target":"hungt_t",
          "value":2
       },
       {
-         "source":0,
-         "target":8,
+         "source":"kalunhodotcom",
+         "target":"_myself_adnan_",
          "value":2
       },
       {
-         "source":0,
-         "target":9,
+         "source":"kalunhodotcom",
+         "target":"danieldurall",
          "value":2
       },
       {
-         "source":9,
-         "target":10,
+         "source":"danieldurall",
+         "target":"cynvasconcelos",
          "value":2
       },
       {
-         "source":0,
-         "target":10,
+         "source":"kalunhodotcom",
+         "target":"cynvasconcelos",
          "value":2
       },
       {
-         "source":10,
-         "target":16,
+         "source":"cynvasconcelos",
+         "target":"lauraluiize_v",
          "value":2
       },
       {
-         "source":0,
-         "target":11,
+         "source":"kalunhodotcom",
+         "target":"itsging_er",
          "value":2
       },
       {
-         "source":0,
-         "target":12,
+         "source":"kalunhodotcom",
+         "target":"fujifil.m",
          "value":2
       },
       {
-         "source":12,
-         "target":14,
+         "source":"fujifil.m",
+         "target":"_albarossa_",
          "value":2
       },
       {
-         "source":12,
-         "target":16,
+         "source":"fujifil.m",
+         "target":"lauraluiize_v",
          "value":2
       },
       {
-         "source":0,
-         "target":13,
+         "source":"kalunhodotcom",
+         "target":"trung_ls",
          "value":2
       },
       {
-         "source":11,
-         "target":13,
+         "source":"itsging_er",
+         "target":"trung_ls",
          "value":2
       },
       {
-         "source":13,
-         "target":20,
+         "source":"trung_ls",
+         "target":"ibo_z1xx",
          "value":2
       },
       {
-         "source":13,
-         "target":15,
+         "source":"trung_ls",
+         "target":"maico_ngyn",
          "value":2
       },
       {
-         "source":13,
-         "target":17,
+         "source":"trung_ls",
+         "target":"thu_van",
          "value":2
       },
       {
-         "source":6,
-         "target":13,
+         "source":"thihiiii",
+         "target":"trung_ls",
          "value":2
       },
       {
-         "source":0,
-         "target":14,
+         "source":"kalunhodotcom",
+         "target":"_albarossa_",
          "value":2
       },
       {
-         "source":14,
-         "target":16,
+         "source":"_albarossa_",
+         "target":"lauraluiize_v",
          "value":2
       },
       {
-         "source":0,
-         "target":15,
+         "source":"kalunhodotcom",
+         "target":"maico_ngyn",
          "value":2
       },
       {
-         "source":11,
-         "target":15,
+         "source":"itsging_er",
+         "target":"maico_ngyn",
          "value":2
       },
       {
-         "source":15,
-         "target":17,
+         "source":"maico_ngyn",
+         "target":"thu_van",
          "value":2
       },
       {
-         "source":0,
-         "target":16,
+         "source":"kalunhodotcom",
+         "target":"lauraluiize_v",
          "value":2
       },
       {
-         "source":0,
-         "target":17,
+         "source":"kalunhodotcom",
+         "target":"thu_van",
          "value":2
       },
       {
-         "source":11,
-         "target":17,
+         "source":"itsging_er",
+         "target":"thu_van",
          "value":2
       },
       {
-         "source":17,
-         "target":20,
+         "source":"thu_van",
+         "target":"ibo_z1xx",
          "value":2
       },
       {
-         "source":17,
-         "target":19,
+         "source":"thu_van",
+         "target":"hanto_manto",
          "value":2
       },
       {
-         "source":0,
-         "target":19,
+         "source":"kalunhodotcom",
+         "target":"hanto_manto",
          "value":2
       },
       {
-         "source":19,
-         "target":20,
+         "source":"hanto_manto",
+         "target":"ibo_z1xx",
          "value":2
       },
       {
-         "source":1,
-         "target":19,
+         "source":"huy_vu64",
+         "target":"hanto_manto",
          "value":2
       },
       {
-         "source":13,
-         "target":19,
+         "source":"trung_ls",
+         "target":"hanto_manto",
          "value":2
       },
       {
-         "source":0,
-         "target":20,
+         "source":"kalunhodotcom",
+         "target":"ibo_z1xx",
          "value":2
       },
       {
-         "source":11,
-         "target":20,
+         "source":"itsging_er",
+         "target":"ibo_z1xx",
          "value":2
       },
       {
-         "source":6,
-         "target":20,
+         "source":"thihiiii",
+         "target":"ibo_z1xx",
          "value":2
       }
    ]
