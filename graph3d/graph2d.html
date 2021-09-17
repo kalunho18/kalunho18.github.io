@@ -13,12 +13,12 @@
 	  
 	  d3.json("kalunhodotcom.json", function(error, data) {
 		for (let i = 0; i < data["nodes"].length; i++) {
-			data["nodes"][i].push({key: "label", value: data["nodes"][i].id});
-			data["nodes"][i].push({key: "level", value: 1});
+			data["nodes"][i].label = data["nodes"][i].id;
+			data["nodes"][i].label = 1;
 	    }
 		
 		for (let i = 0; i < data["links"].length; i++) {
-			data["links"][i].push({key: "strength", value: 1.0});
+			data["links"][i].strength = 1.0;
 	    }
 		console.log(data); // this is your data
 		  
