@@ -13,6 +13,9 @@
 	  
 	  d3.json("kalunhodotcom.json", function(error, data) {
 		console.log(data); // this is your data
+		for (let i = 0; i < data["nodes"].length; i++) {
+			console.log(data["nodes"][i]);
+	    	}
 	  });
 	  
 var baseNodes =[
