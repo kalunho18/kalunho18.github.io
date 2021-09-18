@@ -30,13 +30,14 @@
               { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }, // new position
               node, // lookAt ({ x, y, z })
               3000  // ms transition duration
-            )
-          .nodeThreeObject(node => {
-            const sprite = new SpriteText(node.id);
-            sprite.material.depthWrite = false; // make sprite background transparent
-            sprite.color = node.color;
-            sprite.textHeight = 8;
-            return sprite;
-          });
+            );
+          })
+        .nodeThreeObject(node => {
+          const sprite = new SpriteText(node.id);
+          sprite.material.depthWrite = false; // make sprite background transparent
+          sprite.color = node.color;
+          sprite.textHeight = 8;
+          return sprite;
+        });
    </script>
 </body>
