@@ -11,7 +11,7 @@
       <svg width="100%" height="100%"></svg>
       <script src="https://d3js.org/d3.v4.min.js"></script>
       <script>
-	  d3.json("kalunhodotcom.json", function(error, data) {
+	  d3.json("graph.json", function(error, data) {
 	    for (let i = 0; i < data["nodes"].length; i++) {
 	       data["nodes"][i].label = data["nodes"][i].id;
 	       data["nodes"][i].level = 1;
